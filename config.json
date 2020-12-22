@@ -1,0 +1,53 @@
+{
+    "vPage": "https://ipsilon.sgu.ru",
+    "vSleepTime": 0.10,
+
+    "fRequiresAuth": true,
+    "oAuthConfig": {
+        "vPage": "/users/sign_in",
+        "vLIFName": "user[email]",
+        "vPIFName": "user[password]",
+        "vLogin": "EMAIL-HERE",
+        "vPassword": "PASSWORD-HERE"
+    },
+
+    "fDownloadUsersImages": true,
+    "oUserConfig": {
+        "vStartID": 200,
+        "vRequiresCount": -10,
+        "vPageTemplate": "/users/",
+        "vUsernameSelector": ".us-profile-info_fio",
+        "vImageSelector": ".us-profile-avatar img",
+        "vRequiresImageBlockAttribute": "src",
+        "vMissingImageSelector": ".us-profile-avatar img[alt=\"Medium missing\"]",
+        "oImageSrcReplace": {
+            "medium_": ""
+        }
+    },
+
+    "oOutputConfig": {
+        "vPath": "DATA\\",
+        "fCreateIDsFolder": true,
+        "fConsoleOutput": true,
+        "fCreateLogFile": true
+    },
+
+    "fSearchUsers": true,
+    "oSearchConfig": {
+        "vUsernameSubstring": "USERNAME-HERE",
+        "vImageSrcSubstring": "",
+        "fPauseSearching": true
+    },
+
+    "aIgnoringByID": [
+        0
+    ],
+    "aIgnoringByContent": [
+        {
+            "vUsernameSubstring": "YOUR-USERNAME-HERE",
+            "vImageSrcSubstring": ""
+        }
+    ],
+    "aIgnoringByBlocks": [
+    ]
+}
